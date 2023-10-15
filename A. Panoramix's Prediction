@@ -1,0 +1,35 @@
+
+
+#include <iostream>
+using namespace std;
+//minhazchyz
+int main() {
+	int n,m;
+	cin>>n>>m;
+	int flag=0;
+	int c=0;
+	   for(int prm=n+1;prm<=m;prm++){
+	       c=0;
+	       for(int i=2;i<=(prm/2)+1;i++){
+	           if(prm%i==0){
+	               c++;
+	           }
+	     }
+	     if(c==0){
+	         if(prm==m){
+	         cout<<"YES"<<endl;
+	         flag=1;
+	         break;
+	         }
+	        else{
+	        cout<<"NO"<<endl;
+	         flag=1;
+	         break;
+	         }
+	     }
+	}
+	if(!flag){
+	    cout<<"NO"<<endl;
+	}
+	return 0;
+}
